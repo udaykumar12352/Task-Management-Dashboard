@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Welcome to Task Dashboard</h2>
+
+<input type="text" id="title" placeholder="Task Title">
+<input type="date" id="dueDate">
+<textarea id="description" placeholder="Task Description"></textarea>
+<button onclick="addTask()">Add Task</button>
+
+<h3>Search Tasks</h3>
+<input type="text" id="search" oninput="searchTasks()" placeholder="Search Tasks">
+
+<div>
+  <button onclick="filterTasks('Pending')">Pending Tasks</button>
+  <button onclick="filterTasks('Completed')">Completed Tasks</button>
+</div>
+
+<div id="taskList"></div>
+<button onclick="logout()">Logout</button>
+
+<script src="script.js"></script>
+</body>
+</html>
